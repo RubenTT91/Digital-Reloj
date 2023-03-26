@@ -1,5 +1,5 @@
 const  mostrarHora = ()=>{
-    let date  = new Date();    
+    let date  = new Date();
     
     let hr = formatearDigitos(date.getHours());
     let min = formatearDigitos(date.getMinutes());
@@ -9,9 +9,9 @@ const  mostrarHora = ()=>{
 
 
     let mes = ['Ene','Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-    let dia = ['Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab', 'Dom'];
+    let dia = ['Dom','Lun', 'Mar', 'Mier', 'Jue', 'Vier', 'Sab'];
     let diaSem = dia[date.getDay()];
-    let diaNum = date.getDay();
+    let diaNum = date.getDate(); 
     let mesA = mes[date.getMonth()];
     let fecha = `${diaSem}, ${diaNum} de ${mesA}`    
     document.getElementById('fecha').innerHTML = fecha;
